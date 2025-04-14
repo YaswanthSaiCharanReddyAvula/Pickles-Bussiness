@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #ffffff;
+    --second-bg-color: #f5f5f5;
+    --text-color: #333333;
+    --main-color: #4CAF50;
+    --accent-color: #45a049;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* Header Styles */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(255,255,255,.2);
+}
+
+.logo{
+    font-size: 5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    -webkit-text-stroke: .1rem var(--bg-color);
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--bg-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--second-bg-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--bg-color);
+    display: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#menu-icon.bx-x {
+    transform: rotate(180deg);
+}
+
+/* Home Section */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+.home-img img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.about-img img{
+    width: 35vw;
+    border-radius: 4rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Products Section */
+.products h2{
+    margin-bottom: 5rem;
+}
+
+.products-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.products-category{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.products-category:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.products-category h3{
+    font-size: 2.6rem;
+    color: var(--main-color);
+}
+
+.products-category ul{
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.products-category ul li{
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.shipping-note{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact-info{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-info h3{
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info h3:last-of-type {
+    color: #FFA500;
+    margin-top: 2rem;
+}
+
+.contact-info p{
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+.contact-info i{
+    color: var(--main-color);
+    margin-right: 1rem;
+}
+
+.contact-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.whatsapp-btn1{
+    display: inline-flex;
+    align-items: center;
+    background: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    margin: 1rem;
+    transition: 0.3s;
+}
+
+.whatsapp-btn2{
+    display: inline-flex;
+    align-items: center;
+    background: #FFA500;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    margin: 1rem;
+    transition: 0.3s;
+}
+
+.whatsapp-btn1:hover{
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+}
+
+.whatsapp-btn1:hover{
+    background: #02522b;
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+}
+
+.whatsapp-btn2:hover{
+    background: #FF8C00;
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+}
+
+.whatsapp-btn1 i,
+.whatsapp-btn2 i{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.contact form{
+    display: none;
+}
+
+/* Footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+.footer-icontop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-icontop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icontop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+/* Break Points */
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+  
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--main-color);
+        display: none;
+        flex-direction: column;
+        padding: 1rem 3%;
+        border-top: .1rem solid rgba(255,255,255,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+  
+    .navbar.active {
+        display: flex;
+    }
+  
+    .navbar a {
+        margin: 2rem;
+        font-size: 2rem;
+        color: var(--bg-color);
+        text-align: center;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .products h2 {
+        margin-bottom: 3rem;
+    }
+
+    .products .heading {
+        margin-bottom: 2rem;
+    }
+
+    .products-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .products-category {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+
+    .social-media a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .whatsapp-btn1,
+    .whatsapp-btn2 {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:365px){
+    .home-img img{
+        width: 90vw;
+    }
+    .about-img img{
+        width: 90vw;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
